@@ -1,0 +1,25 @@
+{
+    "name": "ext-thrax",
+    "displayName": "ext_thrax",
+    "description": "Thrax syntax highlighting",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.55.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "thrax",
+            "aliases": ["Thrax", "thrax"],
+            "extensions": [".grm"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "thrax",
+            "scopeName": "source.thrax",
+            "path": "./syntaxes/thrax.tmLanguage.json"
+        }]
+    }
+}
