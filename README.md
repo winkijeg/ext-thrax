@@ -1,65 +1,57 @@
-# ext-thrax README
+# OpenGrm Thrax Grammar Syntax Highlighting for VS Code
 
-This is the README for your extension "ext-thrax". After writing up a brief description, we recommend including the following sections.
+VS Code Extension *ext-thrax* adds syntax highlighting for OpenGrm Thrax files. Once installed, syntax highlighting for files ending on .grm is available.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+A screenshot using Theme Dark+ is shown below.
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+\!\[screenshot\]\(images/screenshot_01.png\)
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+There are no dependencies. To install this extension, download this archive and unzip iz in $HOME/.vscode/extensions. If after closing VS Code and re-open a thrax grammar file, syntax highlighting is active.
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+Some scope names are not covered depending on active Theme. In order to add syntax highlighting for some themes, Open Settings (STRG+,) and enter `editor.tokenColorCustomizations`, open the .json file and add setting for missing scope names.
 
 For example:
 
-This extension contributes the following settings:
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+````
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "keyword.operator.thrax",
+                "settings": {
+                    "foreground": "#FF0000"
+                }
+            },
+            {
+                "scope": "constant.numeric.thrax",
+                "settings": {
+                    "foreground": "#00a2ff"
+                }
+            },
+            {
+                "scope": "entity.name.function.thrax",
+                "settings": {
+                    "foreground": "#ffae00",
+                    "fontStyle": "italic"
+                }
+            }
+        ]
+    }
+````
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+At the moment, grammatical structure of thrax files is not fully developed. Reserved words are implemented partly so far.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-Initial release of ...
+Initial release of Syntax Highlighting for Thrax grammars.
 
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**

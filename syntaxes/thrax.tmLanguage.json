@@ -3,27 +3,74 @@
 	"name": "Thrax",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"include": "#comments"
+		},
+		{
+			"include": "#operators"
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#costs"
+		},
+		{
+			"include": "#reserved-words"
+		},
+		{
+			"include": "#functions"
 		}
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.thrax",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.thrax",
-			"begin": "\"",
-			"end": "\"",
+		"comments": {
 			"patterns": [
 				{
-					"name": "constant.character.escape.thrax",
-					"match": "\\\\."
+					"name": "comment.line.number-sign.thrax",
+					"match": "^#.*$"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.operator.thrax",
+					"match": "\\||\\(|\\)"
+				}
+			]
+		},
+		"strings": {
+			"patterns": [
+				{
+					"name": "string.quoted.double.thrax",
+					"match": "\".*?\""
+				},
+				{
+					"name": "string.quoted.single.thrax",
+					"match": "'.*?'"
+				}
+			]
+		},
+		"costs": {
+			"patterns": [
+				{
+					"name": "constant.numeric.thrax",
+					"match": "<[0-9.]*>"
+				}
+			]
+		},
+		"reserved-words": {
+			"patterns": [
+				{
+					"name": "entity.name.function.member.thrax",
+					"match": "\\b(export|import|as|func|return)\\b"
+				}
+			]
+		},
+		"functions":{
+			"patterns": [
+				{
+					"name": "entity.name.function.thrax",
+					"match": "CDRewrite|Optimize|\\[|\\]|\\+|\\?|\\*"
 				}
 			]
 		}
