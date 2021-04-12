@@ -1,4 +1,4 @@
-# OpenGrm Thrax Grammar Syntax Highlighting for VS Code
+# OpenGrm Thrax Grammar Extension for VS Code
 
 VS Code Extension *ext-thrax* adds syntax highlighting for OpenGrm Thrax files. Once installed, syntax highlighting for files ending on .grm is available.
 
@@ -6,7 +6,7 @@ VS Code Extension *ext-thrax* adds syntax highlighting for OpenGrm Thrax files. 
 
 A screenshot using Theme Dark+ is shown below.
 
-\!\[screenshot\]\(images/screenshot_01.png\)
+![screenshot](images/screenshot_01.png)
 
 ## Requirements
 
